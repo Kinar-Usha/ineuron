@@ -61,11 +61,11 @@ export default class Home extends React.Component {
                     </View>
                 </VStack>
                     <Flex space={3} justifyItems='space-between' direction={Platform.OS == 'web' ? 'row' : 'column'} marginTop={Platform.OS=='android'?'5%':'10%'} marginLeft={Platform.OS=='android'?'0%':'2%'}>
-                        <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <MyCard uri= "https://www.krishakjagat.org/wp-content/uploads/2017/01/552-800x445.jpg" title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
                         <Text>     </Text>
-                        <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <MyCard uri= "https://img.krishijagran.com/media/67402/rfg.jpg" title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
                         <Text>      </Text>
-                        <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <MyCard uri= "https://files.123freevectors.com/wp-content/uploads/backgroundvectors/wheat-crop-icons-free-vector.jpg" title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
                     </Flex>                
                 </Center>
             </Box>

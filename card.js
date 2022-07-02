@@ -28,7 +28,7 @@ export default class MyCard extends React.Component{
                             <Box>
                                 <AspectRatio w="100%" ratio={16 / 9}>
                                     <Image source={{
-                                        uri: "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg"
+                                        uri: this.props.uri 
                                     }} alt="image" />
                                 </AspectRatio>
                             </Box>
