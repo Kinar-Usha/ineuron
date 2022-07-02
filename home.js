@@ -60,12 +60,13 @@ export default class Home extends React.Component {
                         </Text>
                     </View>
                 </VStack>
-                <Flex space={3} justifyContent='space-between' direction={Platform.OS == 'web' ? 'row' : 'column'} marginTop={Platform.OS=='android'?'5%':'10%'} marginLeft={Platform.OS=='android'?'0%':'2%'}>
-                    <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
-                    Spacer
-                    <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
-                    <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
-                </Flex>
+                    <Flex space={3} justifyItems='space-between' direction={Platform.OS == 'web' ? 'row' : 'column'} marginTop={Platform.OS=='android'?'5%':'10%'} marginLeft={Platform.OS=='android'?'0%':'2%'}>
+                        <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <Text>     </Text>
+                        <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <Text>      </Text>
+                        <MyCard title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                    </Flex>                
                 </Center>
             </Box>
         );
