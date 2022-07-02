@@ -65,7 +65,7 @@ class Login extends React.Component{
                    
                     <HStack space={1} marginRight={"2%"}>
                         <Button size="md" variant="solid" backgroundColor="green.500" >
-                            Register
+                            Login
                         </Button>
                     </HStack>
                 </HStack>
@@ -101,7 +101,7 @@ speed={1}
         <Heading mt="1" _dark={{
         color: "warmGray.200"
       }} color="coolGray.600" fontWeight="medium" size="xs">
-          Sign in to continue!
+          Sign up to continue!
         </Heading>
 
         <VStack space={3} mt="5">
@@ -121,7 +121,7 @@ speed={1}
             </Link>
           </FormControl>
           <Button mt="2" backgroundColor="green.600" onPress={(email,password)=>{
-            signInWithEmailAndPassword(auth, email, password)
+            createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
               const user = userCredential.user;
             })
@@ -130,7 +130,7 @@ speed={1}
               const errorMessage = error.message;
             });
           }}>
-            Sign in
+            Sign up
           </Button>
           <HStack mt="6" justifyContent="center">
             <Text fontSize="sm" color="coolGray.600" _dark={{
