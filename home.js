@@ -11,6 +11,7 @@ import {
     Divider,
     Stack,
     VStack,
+    ScrollView,
 } from "native-base";
 import { Platform } from 'react-native';
 
@@ -23,13 +24,14 @@ export default class Home extends React.Component {
     // console.log(windowWidth);
 
         return (
-            <Box w={['100%', '100%', '100%']}>
+            <ScrollView>
+                <Box w={['100%', '100%', '100%']} safeAreaTop>
                 {/* <Box safeAreaTop /> */}
                 <Box position='absolute'>
-                <AspectRatio  w="100%" h="100%" ratio={16 / 9}>
+                {/* <AspectRatio  w="100%" h="100%" ratio={16 / 9}>
                                     <Image source={{uri:"https://img.freepik.com/free-vector/flat-farm-landscape_52683-9443.jpg?size=626&ext=jpg"}} alt=""  />
 
-                </AspectRatio>
+                </AspectRatio> */}
                 </Box>
                 <Center w="100%">
                 <HStack   bg="green.100"  px="1" py="3" justifyContent="space-between"  w="100%" >
@@ -61,14 +63,15 @@ export default class Home extends React.Component {
                     </View>
                 </VStack>
                     <Flex space={3} justifyItems='space-between' direction={Platform.OS == 'web' ? 'row' : 'column'} marginTop={Platform.OS=='android'?'5%':'10%'} marginLeft={Platform.OS=='android'?'0%':'2%'}>
-                        <MyCard uri= "https://www.krishakjagat.org/wp-content/uploads/2017/01/552-800x445.jpg" title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <MyCard  uri= "https://www.krishakjagat.org/wp-content/uploads/2017/01/552-800x445.jpg" title="Wheat" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
                         <Text>     </Text>
-                        <MyCard uri= "https://img.krishijagran.com/media/67402/rfg.jpg" title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <MyCard uri= "https://img.krishijagran.com/media/67402/rfg.jpg" title="Paddy" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
                         <Text>      </Text>
-                        <MyCard uri= "https://files.123freevectors.com/wp-content/uploads/backgroundvectors/wheat-crop-icons-free-vector.jpg" title="First One" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
+                        <MyCard uri= "https://files.123freevectors.com/wp-content/uploads/backgroundvectors/wheat-crop-icons-free-vector.jpg" title="Jowar" subtitle="Some random sentence" desc="Bengaluru (also called Bangalore) is the center of India's high-tech industry. The city is also known for its parks and nightlife"/>
                     </Flex>                
                 </Center>
             </Box>
+            </ScrollView>
         );
     }
 }
