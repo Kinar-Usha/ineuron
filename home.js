@@ -43,15 +43,15 @@ export default class Home extends React.Component {
 
                 </AspectRatio>
                 </Box>
-                <Center  bg="" w="100%">
-                <HStack display="flex"  bg="green.100"  px="1" py="3" justifyContent="space-between"  w="100%" >
+                <Center w="100%">
+                <HStack   bg="green.100"  px="1" py="3" justifyContent="space-between"  w="100%" >
                     {/* <HStack alignItems="center" marginLeft='2%' > */}
                         <Text color="black" fontSize="20" fontWeight="bold" marginLeft='2%' alignItems='center'>
                             Name
                         </Text>
                     {/* </HStack> */}
                    
-                    <HStack space={3}  width='100%'>
+                    <HStack space={3}>
                         <Button size="md" variant="solid" backgroundColor="green.500">
                             Login
                         </Button>
