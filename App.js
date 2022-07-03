@@ -14,7 +14,6 @@ export default function App() {
     return (
         <NativeBaseProvider>
             
-            <Test />
             <Sell/>
             
         </NativeBaseProvider>

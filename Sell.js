@@ -40,8 +40,19 @@ let Hubli = [
 
 function Sell() {
     var [place, setPlace] = useState()
-    
+    var [price,setPrice]=useState()
     var [data, setData] = useState()
+    var [submit,setSubmit] = useState(false)
+    const handleChange=(params)=> (event)=>{
+        // setPrice(event.target.value)*data[data.length()-1][y];
+        setPrice(event.target.value);
+    }
+    const handleSubmit=(params)=> (event)=>{
+        setSubmit(event.target.value);
+    }
+    const display=()=>{
+        return(submit?<Text>{price*data[data.length()-1][y]}</Text>:null)
+    }
     return (
         <Box>
             <Flex
@@ -106,9 +117,12 @@ function Sell() {
                 </Box>
                 <Center p={ [20,20,30]} w="" h="" bg="" style={{ flex: 0.5 }}>
                     <Text>select</Text>
-                    <Input mb="15" w="70%"/>
-                    <Button>Sell</Button>
-
+                    <Input mb="15" w="70%" onChange={handleChange("price")}/>
+                    {
+                        price?<Text>{price}</Text>:null
+                    }
+                    <Button onPress={handleSubmit("submit")}>Sell</Button>
+                    <display/>
                 </Center>
             </Flex>
         </Box>
