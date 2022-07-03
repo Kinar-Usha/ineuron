@@ -28,7 +28,7 @@ export default class MyCard extends React.Component{
                             <Box>
                                 <AspectRatio w="100%" ratio={16 / 9}>
                                     <Image source={{
-                                        uri: "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg"
+                                        uri: this.props.uri 
                                     }} alt="image" />
                                 </AspectRatio>
                             </Box>
@@ -38,9 +38,9 @@ export default class MyCard extends React.Component{
                                         {this.props.title}
                                     </Heading>
                                     <Text fontSize="xs" _light={{
-                                        color: "violet.500"
+                                        color: "green.700"
                                     }} _dark={{
-                                        color: "violet.400"
+                                        color: "green.700"
                                     }} fontWeight="500" ml="-0.5" mt="-1">
                                         {this.props.subtitle}
                                     </Text>
@@ -53,7 +53,6 @@ export default class MyCard extends React.Component{
                                         <Text color="coolGray.600" _dark={{
                                             color: "warmGray.200"
                                         }} fontWeight="400">
-                                            6 mins ago
                                         </Text>
                                     </HStack>
                                 </HStack>
