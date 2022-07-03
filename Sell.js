@@ -4,12 +4,15 @@ import {
     Select,
     Flex,
     Text,
+    VStack,
     View,
     useMediaQuery,
-    CheckIcon, Input,
+    CheckIcon, Input,Heading,
 Button,
 Center
 } from "native-base";
+import { Platform } from 'react-native';
+
 import React, {useState} from "react";
 import { Bar } from "react-chartjs-2";
 import { Charts } from "./Charts";
@@ -47,11 +50,20 @@ function Sell() {
         // setPrice(event.target.value)*data[data.length()-1][y];
         setPrice(event.target.value);
     }
-    const handleSubmit=(params)=> (event)=>{
-        setSubmit(event.target.value);
+    const handleSubmit=()=>{
+        setSubmit(true);
+        // let x= parseInt(data[data.length() -1 ][y])
+        // let y = price * x
+        console.log(data[data.length-1].y)
+
+        
     }
     const display=()=>{
-        return(submit?<Text>{price*data[data.length()-1][y]}</Text>:null)
+        let x= parseInt(data[data.length -1 ].y)
+        let y = price * x
+        data[data.length-1].y
+        
+        
     }
     return (
         <Box>
@@ -116,13 +128,14 @@ function Sell() {
                     </VictoryChart></Box>
                 </Box>
                 <Center p={ [20,20,30]} w="" h="" bg="" style={{ flex: 0.5 }}>
-                    <Text>select</Text>
+                    <Text>Type in your required quantity of crop</Text>
                     <Input mb="15" w="70%" onChange={handleChange("price")}/>
-                    {
-                        price?<Text>{price}</Text>:null
-                    }
-                    <Button onPress={handleSubmit("submit")}>Sell</Button>
-                    <display/>
+                    
+                    <Button onPress={()=>{handleSubmit()}}>Press to see price</Button><br/>
+                    
+                    {submit ? <Box bg="green.100" py="4" mt="10" px="3" borderRadius="5" rounded="md" maxWidth={Platform.OS == 'android' ? '380' : '600'}> <Text>Total price of your crop = Rs. {price*data[data.length-1].y*1000}</Text></Box>:null}
+                                    
+                    
                 </Center>
             </Flex>
         </Box>
