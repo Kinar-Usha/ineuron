@@ -21,9 +21,9 @@ import {Entypo} from "@native-base/icons";
 export default class Footer extends React.Component {
     render() {
         return (
-            <Box  bg="green.100" safeAreaTop width="100%" maxW="100%" h={"20%"} maxH={"20%"} alignSelf="center">
+            <Box  bg="green.100" safeAreaTop width="100%" maxW="100%" h={"7%"} maxH={"20%"} alignSelf="center">
                 {/* <HStack w={"100%"} h="100%"> */}
-                    <Center backgroundColor={"green.150"} w="100%" justifyContent={'center'} justifyItems ="center">
+                    <Center backgroundColor={"green.100"} w="100%" justifyContent={'center'} justifyItems ="center">
                         <Box>
                         <Heading justifyContent={'center'} alignContent = 'center' size={Platform.OS=='web'?'md':null}>
                             Contact Us
@@ -31,8 +31,6 @@ export default class Footer extends React.Component {
                         </Box>
                         <Box>
                         <Heading justifyContent={'center'} alignContent = 'center' size={Platform.OS=='web'?'md':null}>
-                        {/* <Icon as={Entypo} name="mail"></Icon> */}
-                        {/* <FontAwesomeIcon icon="fa-solid fa-mailbox" /> */}
                              <Link href = "mailto:namma_mandi@gmail.com">namma_mandi@gmail.com</Link>
                              </Heading>
                         </Box>
@@ -42,14 +40,7 @@ export default class Footer extends React.Component {
                             
                         </Heading>
                         </Box>
-                    </Center>
-                {/* </HStack> */}
-                {/* <VStack w ={"50%"} h="100%">
-                    <Box backgroundColor={"red.300"} w = "100%" >
-                        <Heading size={Platform.OS=='web'? 'md':null}>namma_mandi@gmail.com</Heading>
-                    </Box>
-                </VStack> */}
-                
+                    </Center>   
             </Box>
         );
     }
