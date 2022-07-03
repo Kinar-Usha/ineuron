@@ -21,7 +21,6 @@ import {
 } from "native-base";
 
 import { Platform, StyleSheet } from "react-native";
-import LottieView from "lottie-react-native";
 
 
 class Register extends React.Component {

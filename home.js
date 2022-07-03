@@ -37,15 +37,19 @@ export default class Home extends React.Component {
                     </Box>
                     <Center w="100%">
                         <HStack bg="green.100" px="1" py="3" justifyContent="space-between" w="100%" >
+
                             <Text color="emerald.500" fontSize="20" fontWeight="bold" marginLeft='2%' alignItems='center'>
-                                Nam Mandi
+                                <Image mx={Platform.OS == 'android' ? "120" : null} source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ4XDIhY10JdeYemLmmUWuLVSWqXOpXg-l7A&usqp=CAU" }} alt="logo " height="10" rounded="full" width="10" />
+                                  Nam Mandi
                             </Text>
 
                             <HStack space={3}>
-                                <Button size="md"  variant="solid" backgroundColor="green.500">
+                                <Button size="md" variant="solid" backgroundColor="green.500" onPress={()=>{
+                                    return (<Scene key="login" component={Login} onBack={()=>{}}/>);
+                                }}>
                                     Login
                                 </Button>
-                                <Button size="md"  variant="solid" backgroundColor="green.500">
+                                <Button size="md" variant="solid" backgroundColor="green.500">
                                     Register
                                 </Button>
                                 {/* <Button size="md" paddingX='1%' variant="solid" backgroundColor="green.500">
@@ -56,14 +60,14 @@ export default class Home extends React.Component {
                         <VStack>
                             <View>
                                 <Center>
-                                <Heading pt={Platform.OS=='android'?'15':null} fontSize={Platform.OS == 'web' ? '5xl' : '2xl'} alignItems={Platform.OS == 'web' ? 'flex-start' : 'center'} justifyItems={Platform.OS == 'web' ? 'flex-start' : 'center'} style={{ marginLeft: Platform.OS === 'web' ? '13%' :"0%", marginTop: Platform.OS == 'web' ? '10%' : '5%' }}>
-                                    A platform for the{" "}
-                                    <Heading fontSize={Platform.OS == 'web' ? '5xl' : '2xl'} alignItems={Platform.OS == 'web' ? 'center' : 'center'} color="emerald.400">Agricultural Ecosystem</Heading>
-                                </Heading>
+                                    <Heading pt={Platform.OS == 'android' ? '15' : null} fontSize={Platform.OS == 'web' ? '5xl' : '2xl'} alignItems={Platform.OS == 'web' ? 'flex-start' : 'center'} justifyItems={Platform.OS == 'web' ? 'flex-start' : 'center'} style={{ marginLeft: Platform.OS === 'web' ? '13%' : "0%", marginTop: Platform.OS == 'web' ? '10%' : '5%' }}>
+                                        A platform for the{" "}
+                                        <Heading fontSize={Platform.OS == 'web' ? '5xl' : '2xl'} alignItems={Platform.OS == 'web' ? 'center' : 'center'} color="emerald.400">Agricultural Ecosystem</Heading>
+                                    </Heading>
                                 </Center>
                                 <Center>
-                                    <Box bg="green.100" py="4" mt="10" px="3" borderRadius="5" rounded="md" maxWidth={Platform.OS=='android'?'380':'600'}>
-                                        <Flex direction={Platform.OS=='android'?"column-reverse":'row'} justifyContent="space-between">
+                                    <Box bg="green.100" py="4" mt="10" px="3" borderRadius="5" rounded="md" maxWidth={Platform.OS == 'android' ? '380' : '600'}>
+                                        <Flex direction={Platform.OS == 'android' ? "column-reverse" : 'row'} justifyContent="space-between">
                                             <Box justifyContent="space-between">
                                                 <VStack space="2">
 
@@ -76,7 +80,7 @@ export default class Home extends React.Component {
 
                                                 </VStack>
                                             </Box>
-                                            <Image mx={Platform.OS=='android'?"120":null} source={{
+                                            <Image mx={Platform.OS == 'android' ? "120" : null} source={{
                                                 uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhW-jb2PvbjBDIqebhFVjGoQE3WREGiZyYfA&usqp=CAU'
                                             }} alt="Happy farmer" height="100" rounded="full" width="100" />
                                         </Flex>
@@ -87,12 +91,18 @@ export default class Home extends React.Component {
                         <Flex space={3} justifyItems='space-between' direction={Platform.OS == 'web' ? 'row' : 'column'} marginTop={Platform.OS == 'android' ? '5%' : '5%'} marginLeft={Platform.OS == 'android' ? '0%' : '0%'}>
                             <MyCard uri="https://www.krishakjagat.org/wp-content/uploads/2017/01/552-800x445.jpg" title="Wheat" subtitle="Price = Rs. 5000" desc="Bangalore, Hyderabad, Chennai" />
                             <Text>     </Text>
-                            <MyCard uri="https://img.krishijagran.com/media/67402/rfg.jpg" title="Paddy" subtitle="Price = Rs. 4000" desc="Bengaluru, Chennai ,Hyderabad" />
+                            <MyCard uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJQx-piBMVDGewJ8eIcIT3C7Ec10Ura6Vr1g&usqp=CAU" title="Paddy" subtitle="Price = Rs. 4000" desc="Bengaluru, Chennai ,Hyderabad" />
                             <Text>      </Text>
-                            <MyCard uri="https://files.123freevectors.com/wp-content/uploads/backgroundvectors/wheat-crop-icons-free-vector.jpg" title="Jowar" subtitle="Price = Rs. 6000" desc="Bengaluru, Hyderabad, Chennai " />
+                            <MyCard uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWIWakR8h2mB5RIEXnWZ0u12am0MkQaiHY-w&usqp=CAU" title="Jowar" subtitle="Price = Rs. 6000" desc="Bengaluru, Hyderabad, Chennai " />
+                        </Flex>
+                        <Flex space={2} justifyItems='space-between' direction={Platform.OS == 'web' ? 'row' : 'column'} marginTop={Platform.OS == 'android' ? '5%' : '2%'} marginLeft={Platform.OS == 'android' ? '0%' : '0%'}>
+                            <MyCard uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShZ8gw12z9CiUCaDWn_U35ZAIJUgA6m9XS6w&usqp=CAU" title="Maize" subtitle="Price = Rs. 5000" desc="Bangalore, Hyderabad, Chennai" />
+                            <Text>     </Text>
+                            <MyCard uri="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTritU4iXLW6UOSVC06nFzz0PGtQXwCXdIHLQ&usqp=CAU" title="Bengal Gram" subtitle="Price = Rs. 4000" desc="Bengaluru, Chennai ,Hyderabad" />
+                            <Text>      </Text>
                         </Flex>
                         <Text mt={"50"}>
-                                                   
+
                         </Text>
                     </Center>
                     < Footer />
